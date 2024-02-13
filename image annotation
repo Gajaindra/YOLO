@@ -1,0 +1,8 @@
+from ultralytics import YOLO
+import cv2
+model=YOLO('yolov8l.pt') 
+# this model will download the weights (yolov8l means large one) (yolov8n means nano version)
+results=model("images/car.jpg", show=True) 
+# in order to see image (show = True) is included
+cv2.waitKey(0) 
+#output will disappear so the waitKey is given to make it visible for sometime 
